@@ -4,6 +4,7 @@ import CalendarioTorneos from "views/CalendarioTorneos.js";
 import TableList from "views/Rankings.js";
 import UserPage from "views/MiPerfil.js";
 import UpgradeToPro from "views/NuevoTorneo.js";
+import CollapsibleTable from "./components/Tables/TableCollapse";
 
 
 var routes = [
@@ -33,6 +34,14 @@ var routes = [
     name: "Rankings",
     icon: "nc-icon nc-tile-56",
     component: TableList,
+    layout: "/admin",
+  },
+
+  {
+    path: "/dashboard",
+    name: "dashboard",
+    icon: "nc-icon nc-tile-56",
+    component: CollapsibleTable,
     layout: "/admin",
   },
 

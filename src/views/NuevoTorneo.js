@@ -8,7 +8,6 @@ import Container from '@material-ui/core/Container';
 import Fab from '@material-ui/core/Fab';
 import Check from '@material-ui/icons/Check';
 import Close from '@material-ui/icons/Close';
-import { useState } from "react";
 import Moment from 'moment';
 import FormControl from "@material-ui/core/FormControl";
 import { useHistory } from "react-router-dom";
@@ -77,119 +76,49 @@ export default function TaskForm() {
                         <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <FormControl margin="normal" required fullWidth>
-                                    <TextField
-                                        className={classes.root}
-                                        autoComplete="nombreTorneo"
-                                        name="nombreTorneo"
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        id="nombreTorneo"
-                                        label="Nombre Torneo"
-                                        autoFocus
-                                        
+                                    <TextField className={classes.root} autoComplete="nombreTorneo" name="nombreTorneo" variant="outlined" required fullWidth id="nombreTorneo" label="Nombre Torneo" autoFocus 
                                     />
                                 </FormControl>
                             </Grid>
                             <Grid item xs={12}>
                                 <FormControl margin="normal" required fullWidth>
-                                    <TextField
-                                        className={classes.root}
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        id="responsable"
-                                        label="Responsable"
-                                        name="responsable"
-                                        autoComplete="responsable"
+                                    <TextField className={classes.root} variant="outlined" required fullWidth id="responsable" label="Responsable" name="responsable" autoComplete="responsable"
                                     />
                                 </FormControl>
                             </Grid>
                             <Grid item xs={12}>
                                 <FormControl margin="normal" required fullWidth>
-                                    <TextField
-                                        className={classes.root}
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        id="direccion"
-                                        label="Dirección-Ubicación"
-                                        name="direccion"
-                                        autoComplete="direccion"
+                                    <TextField className={classes.root} variant="outlined" required fullWidth id="direccion" label="Dirección-Ubicación" name="direccion" autoComplete="direccion"
                                     />
                                 </FormControl>
                             </Grid>
                             <Grid item xs={12}>
                                 <FormControl margin="normal" required fullWidth>
-                                    <TextField
-                                        className={classes.root}
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        id="ciudad"
-                                        label="Ciudad"
-                                        name="ciudad"
-                                        autoComplete="ciudad"
+                                    <TextField className={classes.root} variant="outlined" required fullWidth id="ciudad" label="Ciudad" name="ciudad" autoComplete="ciudad"
                                     />
                                 </FormControl>
                             </Grid>
                             <Grid item xs={12}>
                                 <FormControl margin="normal" required fullWidth>
-                                    <TextField
-                                        className={classes.root}
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        type="number"
-                                        id="dificultad"
-                                        label="Dificultad"
-                                        name="dificultad"
-                                        autoComplete="dificultad"
+                                    <TextField className={classes.root} variant="outlined" required fullWidth type="number" id="dificultad" label="Dificultad" name="dificultad" autoComplete="dificultad"
                                     />
                                 </FormControl>
                             </Grid>
                             <Grid item xs={12}>
                                 <FormControl margin="normal" required fullWidth>
-                                    <TextField
-                                        className={classes.root}
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        name="precio"
-                                        label="Precio"
-                                        type="number"
-                                        id="precio"
-                                        autoComplete="current-precio"
+                                    <TextField className={classes.root} variant="outlined" required fullWidth name="precio" label="Precio" type="number" id="precio" autoComplete="current-precio"
                                     />
                                 </FormControl>
                             </Grid>
                             <Grid item xs={12}>
                                 <FormControl margin="normal" required fullWidth>
-                                    <TextField
-                                        className={classes.root}
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        name="fechaInicio"
-                                        label="Fecha de Inicio"
-                                        type="date"
-                                        id="fechaInicio"
-                                        defaultValue={Moment(new Date()).format("YYYY-MM-DD")}
+                                    <TextField className={classes.root} variant="outlined" required fullWidth name="fechaInicio" label="Fecha de Inicio" type="date" id="fechaInicio" defaultValue={Moment(new Date()).format("YYYY-MM-DD")}
                                     />
                                 </FormControl>
                             </Grid>
                             <Grid item xs={12}>
                                 <FormControl margin="normal" required fullWidth>
-                                    <TextField
-                                        className={classes.root}
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        name="fechaFin"
-                                        label="Fecha Final"
-                                        type="date"
-                                        id="fechaFin"
-                                        defaultValue={Moment(new Date()).format("YYYY-MM-DD")}
+                                    <TextField className={classes.root} variant="outlined" required fullWidth name="fechaFin" label="Fecha Final" type="date" id="fechaFin" defaultValue={Moment(new Date()).format("YYYY-MM-DD")}
                                     />
                                 </FormControl>
                             </Grid>
@@ -202,7 +131,6 @@ export default function TaskForm() {
                         </Fab>
                     </form>
                 </div>
-            {/* </ThemeProvider> */}
         </Container>
     );
 }

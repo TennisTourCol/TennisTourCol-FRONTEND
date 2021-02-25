@@ -11,6 +11,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Container from '@material-ui/core/Container';
 
 
 const useRowStyles = makeStyles({
@@ -96,7 +97,7 @@ function Row(props) {
 
 const useStylesTable = makeStyles({
     root: {
-        paddingTop: '12%',
+        paddingTop: 60,
         paddingLeft: '5%',
         paddingRight: '5%',
     },
@@ -127,6 +128,7 @@ export default function CollapsibleTable() {
     }, []);
     const classes = useStylesTable();
     return (
+        <Container component="div">
         <TableContainer className={classes.root} >
             <Table aria-label="collapsible table" >
                 <TableBody>
@@ -136,5 +138,6 @@ export default function CollapsibleTable() {
                 </TableBody>
             </Table>
         </TableContainer>
+        </Container>
     );
 }

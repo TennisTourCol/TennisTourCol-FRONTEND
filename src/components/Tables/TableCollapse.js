@@ -105,11 +105,11 @@ const useStylesTable = makeStyles({
 
 export default function CollapsibleTable() {
     const [lista, setLista] = useState([]);
-    var dateFormat = require('dateformat');
-    var date = dateFormat(new Date(), "yyyy-mm-dd");
-    const url = "https://tennis-live-data.p.rapidapi.com/matches-by-date/" + date;
     React.useEffect(() => {
         async function callA() {
+            var dateFormat = require('dateformat');
+            var date = dateFormat(new Date(), "yyyy-mm-dd");
+            const url = "https://tennis-live-data.p.rapidapi.com/matches-by-date/" + date;
             const response = await fetch(url, {
                 method: 'GET',
                 headers: {

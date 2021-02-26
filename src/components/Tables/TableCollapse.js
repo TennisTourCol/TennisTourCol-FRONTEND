@@ -124,7 +124,8 @@ export default function CollapsibleTable() {
             } catch (e) {
                 console.log(e)
             }
-        } callA() 
+        } 
+        // callA() 
     }, []);
     const classes = useStylesTable();
     return (

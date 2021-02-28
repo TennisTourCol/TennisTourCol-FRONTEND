@@ -70,56 +70,43 @@ export default function NuevoTorneo() {
                 <CssBaseline />
                 <div className={classes.paper}>
                     <Typography component="h1" variant="h4">
-                        Información del Torneo
+                        Nombre del Torneo
+                    </Typography>
+                    <Typography component="h1" variant="h6">
+                        Modificar Cuadro
                     </Typography>
                     <form className={classes.form} onSubmit={handleSubmit}>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12}>
+                        
+                        <Grid container spacing={2} >
+                            
+                            <Grid item xs={12} sm={6} >
                                 <FormControl margin="normal" required fullWidth>
-                                    <TextField className={classes.root} autoComplete="nombreTorneo" name="nombreTorneo" variant="outlined" required fullWidth id="nombreTorneo" label="Nombre Torneo" autoFocus 
-                                    />
+                                    <TextField className={classes.root} autoComplete="jugadorLocal" name="jugadorLocal" variant="outlined" required fullWidth id="jugadorLocal" label="Jugador Local" autoFocus />
                                 </FormControl>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item xs={12} sm={6} >
                                 <FormControl margin="normal" required fullWidth>
-                                    <TextField className={classes.root} variant="outlined" required fullWidth id="responsable" label="Responsable" name="responsable" autoComplete="responsable"
-                                    />
+                                    <TextField className={classes.root} variant="outlined" required fullWidth id="jugadorVisitante" label="Jugador Visitante" name="jugadorVisitante" autoComplete="jugadorVisitante" />
                                 </FormControl>
                             </Grid>
-                            <Grid item xs={12}>
+                            {/* <Grid item xs={12} sm={6} >
                                 <FormControl margin="normal" required fullWidth>
-                                    <TextField className={classes.root} variant="outlined" required fullWidth id="direccion" label="Dirección-Ubicación" name="direccion" autoComplete="direccion"
-                                    />
+                                <TextField className={classes.root} variant="outlined" required fullWidth id="direccion" label="Dirección-Ubicación" name="direccion" autoComplete="direccion" />
+                                </FormControl>
+                            </Grid> */}
+                            <Grid item xs={12} sm={4} >
+                                <FormControl margin="normal" required fullWidth>
+                                    <TextField className={classes.root} type="number" variant="outlined" required fullWidth id="numeroCancha" label="Número de Cancha" name="numeroCancha" defaultValue="1" autoComplete="numeroCancha" />
                                 </FormControl>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item xs={12} sm={4} >
                                 <FormControl margin="normal" required fullWidth>
-                                    <TextField className={classes.root} variant="outlined" required fullWidth id="ciudad" label="Ciudad" name="ciudad" autoComplete="ciudad"
-                                    />
+                                    <TextField className={classes.root} variant="outlined" required fullWidth name="fecha" label="Fecha" type="date" id="fecha" defaultValue={Moment(new Date()).format("YYYY-MM-DD")}/>
                                 </FormControl>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item xs={12} sm={4} >
                                 <FormControl margin="normal" required fullWidth>
-                                    <TextField className={classes.root} variant="outlined" required fullWidth type="number" id="dificultad" label="Dificultad" name="dificultad" autoComplete="dificultad"
-                                    />
-                                </FormControl>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <FormControl margin="normal" required fullWidth>
-                                    <TextField className={classes.root} variant="outlined" required fullWidth name="precio" label="Precio" type="number" id="precio" autoComplete="current-precio"
-                                    />
-                                </FormControl>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <FormControl margin="normal" required fullWidth>
-                                    <TextField className={classes.root} variant="outlined" required fullWidth name="fechaInicio" label="Fecha de Inicio" type="date" id="fechaInicio" defaultValue={Moment(new Date()).format("YYYY-MM-DD")}
-                                    />
-                                </FormControl>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <FormControl margin="normal" required fullWidth>
-                                    <TextField className={classes.root} variant="outlined" required fullWidth name="fechaFin" label="Fecha Final" type="date" id="fechaFin" defaultValue={Moment(new Date()).format("YYYY-MM-DD")}
-                                    />
+                                    <TextField className={classes.root} variant="outlined" required fullWidth name="hora" label="Hora" type="time" id="hora" />
                                 </FormControl>
                             </Grid>
                         </Grid>

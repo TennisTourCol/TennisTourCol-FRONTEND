@@ -15,6 +15,8 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import AlertDialogSlide from './InfoTorneo';
+import {Col} from "reactstrap";
 
 class CalendarioTorneos extends React.Component {
   render() {
@@ -26,16 +28,17 @@ class CalendarioTorneos extends React.Component {
       },
     });
     
-    function createData(name, cantidad, promedioG, promedioI, price) {
+    function createData(name, cantidad, promedioG, promedioI, price, masInfo) {
       return {
         name,
         cantidad,
         promedioG,
         promedioI,
         price,
+        masInfo,
         history: [
-          { nombre: 'Torneo Toreto', date: '2020-01-05', grado: 4, cupo: 30, precio: '70.000' },
-          { nombre: 'Torneo la Roca' , date: '2020-01-02', grado: 5, cupo: 12, precio: '65.000'},
+          { nombre: 'Torneo Toreto', date: '2020-01-05', grado: 4, cupo: 30, precio: '70.000' , masInfo: ''},
+          { nombre: 'Torneo la Roca' , date: '2020-01-02', grado: 5, cupo: 12, precio: '65.000', masInfo: ''},
         ],
       };
     }
@@ -119,6 +122,7 @@ class CalendarioTorneos extends React.Component {
                           <TableCell align="center">{historyRow.grado}</TableCell>
                           <TableCell align="right">{historyRow.cupo}</TableCell>
                           <TableCell align="right">{historyRow.precio}</TableCell>
+                          <TableCell align="right"> <AlertDialogSlide/></TableCell>
                         </TableRow>
                       ))}
                     </TableBody>

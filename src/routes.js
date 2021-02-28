@@ -3,8 +3,9 @@ import MiCalendario from "views/MiCalendario.js";
 import CalendarioTorneos from "views/CalendarioTorneos.js";
 import TableList from "views/Rankings.js";
 import UserPage from "views/MiPerfil.js";
-import UpgradeToPro from "views/NuevoTorneo.js";
+import NuevoTorneo from "views/NuevoTorneo.js";
 import CollapsibleTable from "./components/Tables/TableCollapse";
+import ModificarCuadros from './views/ModificarCuadros';
 
 
 var routes = [
@@ -44,13 +45,19 @@ var routes = [
     component: CollapsibleTable,
     layout: "/admin",
   },
-
   {
-    pro: true,
+    path: "/modificarCuadros",
+    name: "Modificar Cuadros",
+    icon: "nc-icon nc-tile-56",
+    component: ModificarCuadros,
+    layout: "/admin",
+  },
+  {
+    // pro: true,
     path: "/NuevoTorneo",
     name: "Agregar torneo",
     icon: "nc-icon nc-spaceship",
-    component: UpgradeToPro,
+    component: NuevoTorneo,
     layout: "/admin",
   },
 ];

@@ -7,11 +7,13 @@
     "node": "14.x"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.11.1",
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "bootstrap": "4.5.0",
     "chart.js": "2.9.3",
     "dateformat": "^4.5.1",
+    "google-map-react": "^2.1.9",
     "history": "4.10.1",
     "node-sass": "4.14.1",
     "perfect-scrollbar": "1.5.0",

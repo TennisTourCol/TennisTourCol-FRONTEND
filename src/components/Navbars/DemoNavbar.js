@@ -18,6 +18,10 @@ import {
   InputGroupAddon,
   Input,
 } from "reactstrap";
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
+import Alert from 'react-bootstrap/Alert'
+
 
 import routes from "routes.js";
 
@@ -147,9 +151,14 @@ class Header extends React.Component {
                   </p>
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem tag="a">Action</DropdownItem>
-                  <DropdownItem tag="a">Another Action</DropdownItem>
-                  <DropdownItem tag="a">Something else here</DropdownItem>
+                      <Alert variant="success">
+                        <p>
+                          Proximo partido el 10/03/2021
+                        </p>
+                      </Alert>
+                      <Alert variant="warning">
+                        <p>Pagar mensualidad a Federacion</p>
+                      </Alert>
                 </DropdownMenu>
               </Dropdown>
               <NavItem>

@@ -6,7 +6,7 @@ import UserPage from "views/MiPerfil.js";
 import NuevoTorneo from "views/NuevoTorneo.js";
 import CollapsibleTable from "./components/Tables/TableCollapse";
 import ModificarCuadros from './views/ModificarCuadros';
-
+import ModificarTorneo from "./views/ModificarTorneo";
 
 var routes = [
   {
@@ -58,6 +58,13 @@ var routes = [
     name: "Agregar torneo",
     icon: "nc-icon nc-spaceship",
     component: NuevoTorneo,
+    layout: "/admin",
+  },
+  {
+    path: "/ModificarTorneo",
+    name: "Modificar Torneo",
+    icon: "nc-icon nc-bank",
+    component: ModificarTorneo,
     layout: "/admin",
   },
 ];

@@ -5,11 +5,16 @@ import Slide from '@material-ui/core/Slide';
 import {Button,Card, CardBody, Col, Row} from "reactstrap";
 import Map from './Map.js'
 import Confirmacion from './Confirmacion'
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements, } from "@stripe/react-stripe-js";
+import Payment from './SlidePayment';
+
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
+const stripe = loadStripe("pk_test_JJ1eMdKN0Hp4UFJ6kWXWO4ix00jtXzq5XG");
 export default function AlertDialogSlide() {
     const [open, setOpen] = React.useState(false);
     const [inscripcion, setInscripcion] = React.useState(false);
@@ -65,14 +70,16 @@ export default function AlertDialogSlide() {
                                 <Map/>
                             </Col>
                         </Row>
-                        <Row position >
+                        <Row  >
                             <Col  >
                                 <Button outline color="success">
-                                    Pagar
+                                    <Payment/>
                                 </Button>
                             </Col>
                             <Col xs="auto">
-                                <Confirmacion/>
+                                <Button outline color="danger" onClick={desincripcion}>
+                                    <Confirmacion/>
+                                </Button>
                             </Col>
                         </Row>
 

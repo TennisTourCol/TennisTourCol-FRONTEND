@@ -21,6 +21,7 @@ export default function AlertDialogSlide() {
     };
 
     return (
+        
         <div>
             <Button variant="outlined" color="primary" onClick={handleClickOpen}>
                 Mas informacion

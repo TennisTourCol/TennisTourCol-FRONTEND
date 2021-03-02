@@ -5,6 +5,7 @@ import Slide from '@material-ui/core/Slide';
 import {Button,Card, CardBody, Col, Row} from "reactstrap";
 
 import Map from "./Map";
+import Inscripcion from "./Inscripcion";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -12,6 +13,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function AlertDialogSlide() {
     const [open, setOpen] = React.useState(false);
+    const [inscripcion,setInscripcion] = React.useState(false);
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -20,7 +22,13 @@ export default function AlertDialogSlide() {
     const handleClose = () => {
         setOpen(false);
     };
-    //"AIzaSyCexgm7W_o5QljnPZCdTiRSb-G7NIpHspw"
+
+    const desincripcion = () => {
+        setInscripcion(false);
+    };
+    const incripcionconf = () => {
+        setInscripcion(true);
+    };
 
     return (
         <div>
@@ -61,6 +69,9 @@ export default function AlertDialogSlide() {
                             </Col>
                         </Row>
                     </CardBody>
+                    <Button outline color="danger" onClick={desincripcion}>
+                        <Inscripcion/>
+                    </Button>
                 </Card>
 
                 <Button onClick={handleClose} outline color="secondary">

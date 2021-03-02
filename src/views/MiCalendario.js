@@ -10,7 +10,6 @@ import {
     Row,
     Col,
 } from "reactstrap";
-import AlertDialogSlideScore from './SlideScore';
 
 
 
@@ -45,8 +44,8 @@ class MiCalendario extends React.Component {
                                     <AlertDialogSlide/>
                                 </Col>
 
-                                    {/*<AlertDialogSlideScore/>
-                                    */}
+                                    {/* <AlertDialogSlideScore/> */}
+                                   
                             </Row>
                         </CardBody>
                     </Card>

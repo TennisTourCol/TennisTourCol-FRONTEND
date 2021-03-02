@@ -72,9 +72,7 @@ export default function AlertDialogSlide() {
                                 </Button>
                             </Col>
                             <Col xs="auto">
-                                <Button outline color="danger" onClick={desincripcion}>
-                                    <Confirmacion/>
-                                </Button>
+                                <Confirmacion/>
                             </Col>
                         </Row>
 

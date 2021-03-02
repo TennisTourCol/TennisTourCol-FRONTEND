@@ -24,7 +24,7 @@ export default function Confirmacion() {
 
     return (
         <div>
-            <Button variant="outlined" color="secundary" onClick={handleClickOpen}>
+            <Button variant="outlined" color="danger" onClick={handleClickOpen}>
                 Retirarse
             </Button>
             <Dialog

@@ -3,16 +3,15 @@ import React from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import Slide from '@material-ui/core/Slide';
 import {Button,Card, CardBody, Col, Row} from "reactstrap";
-import Map from './Map.js'
-import Confirmacion from './Confirmacion'
+
+import Map from "./Map";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function AlertDialogSlide() {
+export default function Confirmacion() {
     const [open, setOpen] = React.useState(false);
-    const [inscripcion, setInscripcion] = React.useState(false);
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -21,19 +20,12 @@ export default function AlertDialogSlide() {
     const handleClose = () => {
         setOpen(false);
     };
-
-    const incripcionconf = () => {
-        setInscripcion(true);
-    };
-
-    const desincripcion = () => {
-        setInscripcion(false);
-    };
+    //"AIzaSyCexgm7W_o5QljnPZCdTiRSb-G7NIpHspw"
 
     return (
         <div>
-            <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-                Mas informacion
+            <Button variant="outlined" color="secundary" onClick={handleClickOpen}>
+                Retirarse
             </Button>
             <Dialog
                 open={open}
@@ -53,36 +45,20 @@ export default function AlertDialogSlide() {
                                 </div>
                             </Col>
                             <Col md="7" xs="7">
-                                <p className="text-left"> Club: Bogotá tennis </p>
-                                <p> Dia: 12 de Julio </p>
-                                <p> Hora: 3:00 pm </p>
+                                <p className="text-center"> ¿Esta seguro de que quiere retirarse del torneo?</p>
                             </Col>
 
 
                         </Row>
-                        <Row>
-                            <Col>
-                                <Map/>
-                            </Col>
-                        </Row>
-                        <Row position >
-                            <Col  >
-                                <Button outline color="success">
-                                    Pagar
-                                </Button>
-                            </Col>
-                            <Col xs="auto">
-                                <Button outline color="danger" onClick={desincripcion}>
-                                    <Confirmacion/>
-                                </Button>
-                            </Col>
-                        </Row>
-
                     </CardBody>
                 </Card>
 
                 <Button onClick={handleClose} outline color="secondary">
                     Ok
+                </Button>
+
+                <Button onClick={handleClose} outline color="secondary">
+                    Cancelar
                 </Button>
             </Dialog>
         </div>

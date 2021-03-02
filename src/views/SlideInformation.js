@@ -3,17 +3,16 @@ import React from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import Slide from '@material-ui/core/Slide';
 import {Button,Card, CardBody, Col, Row} from "reactstrap";
-
-import Map from "./Map";
-import Inscripcion from "./Inscripcion";
+import Map from './Map.js'
+import Confirmacion from './Confirmacion'
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function AlertDialogSlide() {
+export default function UpdateInfoSlide() {
     const [open, setOpen] = React.useState(false);
-    const [inscripcion,setInscripcion] = React.useState(false);
+    const [inscripcion, setInscripcion] = React.useState(false);
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -23,16 +22,17 @@ export default function AlertDialogSlide() {
         setOpen(false);
     };
 
-    const desincripcion = () => {
-        setInscripcion(false);
-    };
     const incripcionconf = () => {
         setInscripcion(true);
     };
 
+    const desincripcion = () => {
+        setInscripcion(false);
+    };
+
     return (
         <div>
-            <Button variant="outlined" color="secundary" onClick={handleClickOpen}>
+            <Button variant="outlined" color="primary" onClick={handleClickOpen}>
                 Mas informacion
             </Button>
             <Dialog
@@ -53,25 +53,31 @@ export default function AlertDialogSlide() {
                                 </div>
                             </Col>
                             <Col md="7" xs="7">
-                                <p className="text-center"> Club: Bogota tennis </p>
-                                <p className="text-center"> Dia: 12 de Julio </p>
-                                <p className="text-center"> Hora: 3:00 pm </p>
-                                <p className="text-center"> GRADO 4 y 5 </p>
+                                <p className="text-left"> Club: Bogotá tennis </p>
+                                <p> Dia: 12 de Julio </p>
+                                <p> Hora: 3:00 pm </p>
                             </Col>
 
 
                         </Row>
                         <Row>
                             <Col>
-                                <div >
-                                    <Map/>
-                                </div>
+                                <Map/>
                             </Col>
                         </Row>
+                        <Row position >
+                            <Col  >
+                                <Button outline color="success">
+                                    Pagar
+                                </Button>
+                            </Col>
+                            <Col xs="auto">
+                                <Button outline color="danger" onClick={desincripcion}>
+                                </Button>
+                            </Col>
+                        </Row>
+
                     </CardBody>
-                    <Button outline color="danger" onClick={desincripcion}>
-                        <Inscripcion/>
-                    </Button>
                 </Card>
 
                 <Button onClick={handleClose} outline color="secondary">

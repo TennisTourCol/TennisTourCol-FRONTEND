@@ -7,6 +7,7 @@ import NuevoTorneo from "views/NuevoTorneo.js";
 import CollapsibleTable from "./components/Tables/TableCollapse";
 import ModificarCuadros from './views/ModificarCuadros';
 import CuadrosTorneos from './views/VerCuadros'
+import ModificarTorneo from "./views/ModificarTorneo";
 
 
 var routes = [
@@ -68,5 +69,12 @@ var routes = [
     component: NuevoTorneo,
     layout: "/admin",
   },
+  {
+    path: "/ModificarTorneo",
+    name: "Modificar Torneo",
+    icon: "nc-icon nc-bank",
+    component: ModificarTorneo,
+    layout: "/admin",
+  }
 ];
 export default routes;

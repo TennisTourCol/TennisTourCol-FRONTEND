@@ -2,9 +2,8 @@ import React from 'react';
 
 import Dialog from '@material-ui/core/Dialog';
 import Slide from '@material-ui/core/Slide';
-import {Button,Card, CardBody, Col, Row} from "reactstrap";
-import Map from './Map.js'
-import Confirmacion from './Confirmacion'
+import {Button,Card, CardBody, Col, Row,Form,FormGroup,Input} from "reactstrap";
+
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -12,7 +11,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function UpdateInfoSlide() {
     const [open, setOpen] = React.useState(false);
-    const [inscripcion, setInscripcion] = React.useState(false);
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -22,18 +20,11 @@ export default function UpdateInfoSlide() {
         setOpen(false);
     };
 
-    const incripcionconf = () => {
-        setInscripcion(true);
-    };
-
-    const desincripcion = () => {
-        setInscripcion(false);
-    };
 
     return (
         <div>
-            <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-                Mas informacion
+            <Button variant="light" onClick={handleClickOpen}>
+                Editar Información
             </Button>
             <Dialog
                 open={open}
@@ -43,46 +34,104 @@ export default function UpdateInfoSlide() {
             >
                 <Card className="card-torneo ">
                     <CardBody>
-                        <Row>
-                            <Col md="2" xs="2">
-                                <div className="avatar">
-                                    <img
-                                        className="img-circle img-no-padding img-responsive"
-                                        src={require("components/img/bg.png")}
-                                    />
+                        <Form>
+                            <Row>
+                                <Col className="pr-1" md="5">
+                                    <FormGroup>
+                                        <label>Usuario</label>
+                                        <Input
+                                            placeholder="Username"
+                                            type="text"
+                                        />
+                                    </FormGroup>
+                                </Col>
+                                <Col className="px-1" md="3">
+                                    <FormGroup>
+                                        <label htmlFor="exampleInputEmail1">
+                                            Email
+                                        </label>
+                                        <Input placeholder="Email" type="email" />
+                                    </FormGroup>
+                                </Col>
+                                <Col className="pl-1" md="4">
+
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col className="pr-1" md="6">
+                                    <FormGroup>
+                                        <label>Apodo</label>
+                                        <Input
+                                            placeholder="Apodo"
+                                            type="text"
+                                        />
+                                    </FormGroup>
+                                </Col>
+                                <Col className="pl-1" md="6">
+                                    <FormGroup>
+                                        <label>Contraseña</label>
+                                        <Input
+                                            placeholder="Password"
+                                            type="password"
+                                        />
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col className="pr-1" md="4">
+                                    <FormGroup>
+                                        <label>Liga</label>
+                                        <Input
+                                            placeholder="Liga"
+                                            type="text"
+                                        />
+                                    </FormGroup>
+                                </Col>
+                                <Col className="px-1" md="4">
+                                    <FormGroup>
+                                        <label>Ciudad</label>
+                                        <Input
+                                            placeholder="Ciudad"
+                                            type="text"
+                                        />
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md="12">
+                                    <FormGroup>
+                                        <label>Descipción</label>
+                                        <Input
+                                            type="textarea"
+                                            defaultValue="Cuenta algo sobre ti."
+                                        />
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col className="pr-1" md="12">
+                                    <FormGroup>
+                                        <label>Imagen de perfil</label>
+                                        <Input placeholder="Imagen" type="file" />
+                                    </FormGroup>
+                                </Col>
+
+                            </Row>
+                            <Row>
+                                <div className="update ml-auto mr-auto">
+                                    <Button
+                                        className="btn-round"
+                                        variant="light"
+                                        type="submit"
+                                    >
+                                        Actualizar información
+                                    </Button>
                                 </div>
-                            </Col>
-                            <Col md="7" xs="7">
-                                <p className="text-left"> Club: Bogotá tennis </p>
-                                <p> Dia: 12 de Julio </p>
-                                <p> Hora: 3:00 pm </p>
-                            </Col>
-
-
-                        </Row>
-                        <Row>
-                            <Col>
-                                <Map/>
-                            </Col>
-                        </Row>
-                        <Row position >
-                            <Col  >
-                                <Button outline color="success">
-                                    Pagar
-                                </Button>
-                            </Col>
-                            <Col xs="auto">
-                                <Button outline color="danger" onClick={desincripcion}>
-                                </Button>
-                            </Col>
-                        </Row>
+                            </Row>
+                        </Form>
 
                     </CardBody>
                 </Card>
-
-                <Button onClick={handleClose} outline color="secondary">
-                    Ok
-                </Button>
             </Dialog>
         </div>
     );

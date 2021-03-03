@@ -22,6 +22,7 @@ export default function ModificarTorneo () {
         <div>
             <br/>
             <br/>
+            <br/>
             <Form>
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
@@ -97,7 +98,10 @@ export default function ModificarTorneo () {
                 </MuiPickersUtilsProvider>
                 <div align="center">
                     <Button  variant="danger" type="submit">
-                        Submit
+                        Eliminar
+                    </Button>
+                    <Button type="submit">
+                        Actualizar
                     </Button>
                 </div>
             </Form>

@@ -113,7 +113,7 @@ export default function CollapsibleTable() {
             const response = await fetch(url, {
                 method: 'GET',
                 headers: {
-                    "x-rapidapi-key": "5aecc03316msh8e7d5b053d4b157p1cc113jsn1c7738ee871e",
+                    "x-rapidapi-key": "b4a4a43c03msh3cc76158bd46315p13bea5jsn1c4be9ab9d20",
                     "x-rapidapi-host": "tennis-live-data.p.rapidapi.com",
                     "useQueryString": true
                 },
@@ -125,7 +125,7 @@ export default function CollapsibleTable() {
                 console.log(e)
             }
         } 
-        // callA() 
+        callA()
     }, []);
     const classes = useStylesTable();
     return (

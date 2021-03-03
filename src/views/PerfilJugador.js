@@ -34,26 +34,6 @@ export default function PerfilJugador() {
                 >
                 <Card className="card-torneo ">
                     <MiPerfil/> 
-                    {/* <CardBody>
-                        <Row>
-                            <Col md="2" xs="2">
-                                <div className="avatar">
-                                    <img
-                                        className="img-circle img-no-padding img-responsive"
-                                        src={require("components/img/bg.png")}
-                                    />
-                                </div>
-                            </Col>
-                            <Col md="7" xs="7">
-                                <p className="text-center"> TORETO</p>
-                            </Col>
-                            <Col>
-                                <p className="text-center"> TORETO</p>
-                            </Col>
-
-
-                        </Row>
-                    </CardBody> */}
                 </Card>
 
                 <Button onClick={handleClose} outline color="secondary">

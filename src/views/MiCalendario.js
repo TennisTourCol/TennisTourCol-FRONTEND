@@ -44,7 +44,6 @@ class MiCalendario extends React.Component {
                                     <AlertDialogSlide/>
                                 </Col>
 
-
                                     {/* <AlertDialogSlideScore/> */}
                                    
                             </Row>

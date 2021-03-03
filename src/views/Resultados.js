@@ -11,7 +11,7 @@ import {
     Col,
 } from "reactstrap";
 import { makeStyles } from '@material-ui/core/styles';
-import AlertDialogSlideScore from './SlideScore';
+import PerfilJugador from './PerfilJugador';
 
 
 
@@ -20,9 +20,9 @@ class Resultado extends React.Component {
 
     render() {
         // const rows=  {partidos:  { 
-        //     partido: [{ nombre: 'Toreto', set1: 5, set2: 4 }, { nombre: 'la Roca' , set1: 2, set2: 5}], 
-        //     partido: [{nombre: 'David', set1: 1, set2: 4}, {nombre: 'Vidad', set1: 6, set2: 6}],
-        //     partido: [{nombre: 'Santiago', set1: 1, set2: 4}, {nombre: 'Agosant', set1: 6, set2: 6}]
+        //     dupla: [{ nombre: 'Toreto', set1: 5, set2: 4 }, { nombre: 'la Roca' , set1: 2, set2: 5}], 
+        //     dupla: [{nombre: 'David', set1: 1, set2: 4}, {nombre: 'Vidad', set1: 6, set2: 6}],
+        //     dupla: [{nombre: 'Santiago', set1: 1, set2: 4}, {nombre: 'Agosant', set1: 6, set2: 6}]
         // }};
         const rows=  [ 
             [{ nombre: 'Toreto', set1: 5, set2: 4 }, { nombre: 'la Roca' , set1: 2, set2: 5}], 
@@ -52,6 +52,9 @@ class Resultado extends React.Component {
                             <Col md="4">
                             <p style={{color:"Black"}}> SET2: </p>
                             </Col>
+                            <Col>
+                            <p style={{color:"Black"}}> PERFIL: </p>
+                            </Col>
                         </Row>
                         {partidos.map((dupla) => (
                             <CardBody>
@@ -65,7 +68,9 @@ class Resultado extends React.Component {
                                     <Col md="4">
                                         <p style={{color:"Black"}}> {dupla.set2} </p>
                                     </Col>
-                                        {/* <AlertDialogSlideScore/> */}
+                                    <Col >
+                                        <PerfilJugador/>
+                                    </Col>
                                 </Row>
                             </CardBody>
                         ))}

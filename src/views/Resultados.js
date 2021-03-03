@@ -11,7 +11,7 @@ import {
     Col,
 } from "reactstrap";
 import { makeStyles } from '@material-ui/core/styles';
-import AlertDialogSlideScore from './SlideScore';
+import PerfilJugador from './PerfilJugador';
 
 
 
@@ -52,6 +52,9 @@ class Resultado extends React.Component {
                             <Col md="4">
                             <p style={{color:"Black"}}> SET2: </p>
                             </Col>
+                            <Col>
+                            <p style={{color:"Black"}}> PERFIL: </p>
+                            </Col>
                         </Row>
                         {partidos.map((dupla) => (
                             <CardBody>
@@ -65,7 +68,9 @@ class Resultado extends React.Component {
                                     <Col md="4">
                                         <p style={{color:"Black"}}> {dupla.set2} </p>
                                     </Col>
-                                        {/* <AlertDialogSlideScore/> */}
+                                    <Col >
+                                        <PerfilJugador/>
+                                    </Col>
                                 </Row>
                             </CardBody>
                         ))}

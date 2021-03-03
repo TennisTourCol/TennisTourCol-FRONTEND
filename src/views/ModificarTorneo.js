@@ -22,6 +22,7 @@ export default function ModificarTorneo () {
         <div>
             <br/>
             <br/>
+            <br/>
             <Form>
                 <br/>
                 <br/>
@@ -99,7 +100,10 @@ export default function ModificarTorneo () {
                 </MuiPickersUtilsProvider>
                 <div align="center">
                     <Button  variant="danger" type="submit">
-                        Submit
+                        Eliminar
+                    </Button>
+                    <Button type="submit">
+                        Actualizar
                     </Button>
                 </div>
             </Form>

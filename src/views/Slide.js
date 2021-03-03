@@ -32,7 +32,8 @@ export default function AlertDialogSlide() {
     };
 
     const desincripcion = () => {
-        setInscripcion(false);
+        console.log("llegue a la funcion");
+        return <Confirmacion/>
     };
 
     return (
@@ -79,7 +80,8 @@ export default function AlertDialogSlide() {
                             <Col xs="auto">
                                 <Button outline color="danger" onClick={desincripcion}>
                                     <Confirmacion/>
-                                </Button>
+                                </Button>                    
+                                    <Confirmacion/>
                             </Col>
                         </Row>
 

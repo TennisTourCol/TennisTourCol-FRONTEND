@@ -8,7 +8,7 @@ import CollapsibleTable from "./components/Tables/TableCollapse";
 import ModificarCuadros from './views/ModificarCuadros';
 import CuadrosTorneos from './views/VerCuadros'
 import ModificarTorneo from "./views/ModificarTorneo";
-
+import App from "./App.jsx";
 
 var routes = [
   {
@@ -62,7 +62,6 @@ var routes = [
     layout: "/admin",
   },
   {
-    // pro: true,
     path: "/NuevoTorneo",
     name: "Agregar torneo",
     icon: "nc-icon nc-spaceship",
@@ -74,6 +73,14 @@ var routes = [
     name: "Modificar Torneo",
     icon: "nc-icon nc-bank",
     component: ModificarTorneo,
+    layout: "/admin",
+
+  },
+  {
+    path: "/Login",
+    name: "Login & Register",
+    icon: "nc-icon nc-bank",
+    component:App,
     layout: "/admin",
   }
 ];

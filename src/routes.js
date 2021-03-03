@@ -62,7 +62,6 @@ var routes = [
     layout: "/admin",
   },
   {
-    // pro: true,
     path: "/NuevoTorneo",
     name: "Agregar torneo",
     icon: "nc-icon nc-spaceship",
@@ -75,6 +74,7 @@ var routes = [
     icon: "nc-icon nc-bank",
     component: ModificarTorneo,
     layout: "/admin",
+
   },
   {
     path: "/Login",

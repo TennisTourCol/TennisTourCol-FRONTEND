@@ -16,7 +16,7 @@ export default function ModificarTorneo () {
     const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
 
     const handleDateChange = (date) => {
-        setSelectedDate(date);
+            setSelectedDate(date);
     };
     return(
         <div>
@@ -24,6 +24,8 @@ export default function ModificarTorneo () {
             <br/>
             <br/>
             <Form>
+                <br/>
+                <br/>
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Nombre Torneo</Form.Label>

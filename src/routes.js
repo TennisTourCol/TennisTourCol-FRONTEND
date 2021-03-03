@@ -8,6 +8,7 @@ import CollapsibleTable from "./components/Tables/TableCollapse";
 import ModificarCuadros from './views/ModificarCuadros';
 import CuadrosTorneos from './views/VerCuadros'
 import ModificarTorneo from "./views/ModificarTorneo";
+import App from "./App.jsx";
 
 var routes = [
   {
@@ -73,7 +74,14 @@ var routes = [
     icon: "nc-icon nc-bank",
     component: ModificarTorneo,
     layout: "/admin",
-  }
 
+  },
+  {
+    path: "/Login",
+    name: "Login & Register",
+    icon: "nc-icon nc-bank",
+    component:App,
+    layout: "/admin",
+  }
 ];
 export default routes;

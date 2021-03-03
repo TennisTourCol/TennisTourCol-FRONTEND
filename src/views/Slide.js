@@ -73,7 +73,9 @@ export default function AlertDialogSlide() {
                                 </Button>
                             </Col>
                             <Col xs="auto">
+                              
                                     <Confirmacion/>
+
                             </Col>
                         </Row>
 

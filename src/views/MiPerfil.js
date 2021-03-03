@@ -5,7 +5,7 @@ import {Col}from "reactstrap";
 import {CardBody} from  "reactstrap";
 import {Card} from  "reactstrap";
 
-
+import UpdateInfoSlide from './SlideInformation';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -156,15 +156,7 @@ export default function MiPerfil () {
 
 
                         <div>
-                            <List component="nav"  aria-label="mailbox folders">
-                                <ListItem button>
-                                    <ListItemText primary="Historial" />
-                                </ListItem>
-                                <Divider light />
-                                <ListItem button>
-                                    <ListItemText primary="Modificar Perfil" />
-                                </ListItem>
-                            </List>
+                            <UpdateInfoSlide/>
                         </div>
                     </Col>
                     <Col>

@@ -16,13 +16,16 @@ export default function ModificarTorneo () {
     const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
 
     const handleDateChange = (date) => {
-        setSelectedDate(date);
+            setSelectedDate(date);
     };
     return(
         <div>
             <br/>
             <br/>
+            <br/>
             <Form>
+                <br/>
+                <br/>
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Nombre Torneo</Form.Label>
@@ -97,7 +100,10 @@ export default function ModificarTorneo () {
                 </MuiPickersUtilsProvider>
                 <div align="center">
                     <Button  variant="danger" type="submit">
-                        Submit
+                        Eliminar
+                    </Button>
+                    <Button type="submit">
+                        Actualizar
                     </Button>
                 </div>
             </Form>

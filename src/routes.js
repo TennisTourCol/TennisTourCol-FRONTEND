@@ -9,7 +9,6 @@ import ModificarCuadros from './views/ModificarCuadros';
 import CuadrosTorneos from './views/VerCuadros'
 import ModificarTorneo from "./views/ModificarTorneo";
 
-
 var routes = [
   {
     path: "/MiCalendario",
@@ -62,7 +61,6 @@ var routes = [
     layout: "/admin",
   },
   {
-    // pro: true,
     path: "/NuevoTorneo",
     name: "Agregar torneo",
     icon: "nc-icon nc-spaceship",
@@ -76,5 +74,6 @@ var routes = [
     component: ModificarTorneo,
     layout: "/admin",
   }
+
 ];
 export default routes;

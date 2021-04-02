@@ -8,6 +8,7 @@ import Check from '@material-ui/icons/Check';
 import Close from '@material-ui/icons/Close';
 import { useHistory } from "react-router-dom";
 import PropTypes from 'prop-types';
+import {servicePost} from '../service/backService';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -54,7 +55,8 @@ export default function FormGeneral({ formulario }) {
         for (let entry of formData.entries()) {
             nuevoTorneo[entry[0]] = entry[1];
         }
-        console.log(nuevoTorneo, "%&%&%&%&%");
+        // console.log(nuevoTorneo, "%&%&%&%&%");
+        servicePost("tournament", nuevoTorneo);
     }
     const classes = useStyles();
     return (

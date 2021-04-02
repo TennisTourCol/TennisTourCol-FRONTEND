@@ -3,7 +3,7 @@ import axios from 'axios';
 const url = 'http://localhost:8080/';
 // const url = '';
 
-function servicePost(path, body, goToCalendario){
+function servicePost(path, body, method){
     console.log(path, body);
     axios.post(url+path, 
              body,
@@ -12,8 +12,8 @@ function servicePost(path, body, goToCalendario){
             //   }}
          )
              .then(function (response) {
-                 alert("Success!");
-                 goToCalendario();
+                 alert(response.data.message);
+                 method();
                  console.log(response.data);
              })
              .catch(function (error) {

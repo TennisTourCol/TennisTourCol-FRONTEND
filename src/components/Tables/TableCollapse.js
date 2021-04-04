@@ -12,7 +12,7 @@ import TableRow from '@material-ui/core/TableRow';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Container from '@material-ui/core/Container';
-
+import {serviceGet} from '../../service/backService';
 
 const useRowStyles = makeStyles({
     root: {
@@ -107,23 +107,24 @@ export default function CollapsibleTable() {
     const [lista, setLista] = useState([]);
     React.useEffect(() => {
         async function callA() {
-            var dateFormat = require('dateformat');
-            var date = dateFormat(new Date(), "yyyy-mm-dd");
-            const url = "https://tennis-live-data.p.rapidapi.com/matches-by-date/" + date;
-            const response = await fetch(url, {
-                method: 'GET',
-                headers: {
-                    "x-rapidapi-key": "b4a4a43c03msh3cc76158bd46315p13bea5jsn1c4be9ab9d20",
-                    "x-rapidapi-host": "tennis-live-data.p.rapidapi.com",
-                    "useQueryString": true
-                },
-            });
-            try {
-                response.json()
-                    .then(data => setLista(data.results));
-            } catch (e) {
-                console.log(e)
-            }
+            // var dateFormat = require('dateformat');
+            // var date = dateFormat(new Date(), "yyyy-mm-dd");
+            // const url = "https://tennis-live-data.p.rapidapi.com/matches-by-date/" + date;
+            // const response = await fetch(url, {
+            //     method: 'GET',
+            //     headers: {
+            //         "x-rapidapi-key": "b4a4a43c03msh3cc76158bd46315p13bea5jsn1c4be9ab9d20",
+            //         "x-rapidapi-host": "tennis-live-data.p.rapidapi.com",
+            //         "useQueryString": true
+            //     },
+            // });
+            serviceGet("mainview", {}, setLista)
+            // try {
+            //     response.json()
+            //         .then(data => setLista(data.results));
+            // } catch (e) {
+            //     console.log(e)
+            // }
         } 
         callA()
     }, []);

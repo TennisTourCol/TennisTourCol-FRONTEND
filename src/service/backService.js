@@ -21,7 +21,7 @@ function servicePost(path, body, method){
              });
 }
 
-function serviceGet(path, body){
+function serviceGet(path, body, method){
     console.log(path, body);
     axios.get(url+path, 
              body,
@@ -30,8 +30,10 @@ function serviceGet(path, body){
             //   }}
          )
              .then(function (response) {
-                alert("Success!");
-                 console.log(response.data);
+                // alert("Success!");
+                var rt = JSON.parse(response.data.body)
+                console.log(rt.results);
+                method(rt.results)
              })
              .catch(function (error) {
                  console.log(error);
